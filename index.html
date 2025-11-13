@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>MENU WINBOOK</title>
+
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    background: url('https://i.postimg.cc/j5sxP9Gb/MENU-BOT-TELE.png') no-repeat top center;
+    background-size: contain;
+    background-color: #000;   /* Để không lòi viền */
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   /* NỀN ĐỨNG YÊN */
+    font-family: Arial, sans-serif;
+}
+
+    /* KHUNG CHÍNH – CĂN GIỮA */
+    .wrap {
+        width: 100%;
+        text-align: center;
+        margin-top: 260px; /* KHÔNG ĐỤNG */
+    }
+
+    /* SUB-TITLE — ĐÃ CHỈNH NHƯ M YÊU CẦU */
+    .sub-title {
+    color: #ffffff;
+    font-size: 32px;               /* BỰ ĐÚNG KHUNG M KHOANH */
+    font-weight: 900;
+    margin-top: -45px;             /* CANH NGAY VÒNG CUNG */
+    margin-bottom: 28px;
+    text-shadow: 0 0 12px #000;
+    letter-spacing: 1px;
+}
+
+    /* NÚT — ĐÃ ĐỔI 440PX → 460PX */
+    .btn {
+        width: 460px;
+        max-width: 90%;
+        padding: 14px 20px;
+        margin: 16px auto;
+        border-radius: 40px;
+        background: rgba(255,255,255,0.9); /* MÀU TRẮNG */
+        backdrop-filter: blur(7px);
+        color: #333; /* CHỮ ĐEN */
+        font-size: 18px;
+        font-weight: bold;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    /* LED chạy viền giữ nguyên */
+    .btn::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 40px;
+        padding: 3px;
+        background: linear-gradient(90deg, #ffdf00, #ff8a00, #ffffff, #ffdf00);
+        background-size: 300% 300%;
+        animation: ledRun 2.2s linear infinite;
+        z-index: 2;
+        -webkit-mask:
+           linear-gradient(#000 0 0) content-box,
+           linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+                mask:
+           linear-gradient(#000 0 0) content-box,
+           linear-gradient(#000 0 0);
+                mask-composite: exclude;
+    }
+
+    @keyframes ledRun {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        object-fit: cover;
+        background: #fff;
+        padding: 2px;
+        position: relative;
+        z-index: 5;
+    }
+
+    .btn span {
+        position: relative;
+        z-index: 5;
+        color: #333;
+    }
+
+    .title {
+        color: #fff;
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-shadow: 0 0 6px #000;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+    <!-- SUB-TITLE: THÊM ICON 🎯 -->
+    <div class="sub-title">🎯 HỆ THỐNG HỖ TRỢ WINBOOK 24/7</div>
+
+    <div class="title">ĐĂNG KÝ & HỖ TRỢ</div>
+
+    <!-- ĐỔI ICON TICK VÀNG -->
+    <a class="btn" href="https://www.winbook1.com">
+        <img class="icon" src="https://i.postimg.cc/RFfnxnTB/LOGO-TICK-VANG.jpg">
+        <span>Đăng ký Nhận ngay 68k</span>
+    </a>
+
+    <a class="btn" href="https://t.me/WinbookCSKH001">
+        <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">
+        <span>CSKH001</span>
+    </a>
+
+    <a class="btn" href="https://t.me/WinbookCSKH002">
+        <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">
+        <span>CSKH002</span>
+    </a>
+
+    <a class="btn" href="https://is.gd/winbookcskh">
+        <img class="icon" src="https://i.postimg.cc/s2pTh0rf/4915a001d866b017652196d1854a3d2e.jpg">
+        <span>CSKH ZALO</span>
+    </a>
+
+        <a class="btn" href="https://direct.lc.chat/19366399/">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/5977/5977519.png">
+        <span>Live Chat</span>
+    </a>
+
+    <!-- ⭐ PHẦN BỔ SUNG MỚI ⭐ -->
+    <div class="title">THÔNG BÁO SỰ KIỆN - ƯU ĐÃI</div>
+
+    <a class="btn" href="https://t.me/WinbookEvent">
+        <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">
+        <span>Kênh Chính</span>
+    </a>
+
+   <a class="btn" href="https://t.me/winbook8888">
+    <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">
+    <span>Nhóm Chat</span>
+</a>
+
+<!-- ⭐ HẾT PHẦN BỔ SUNG ⭐ -->
+
+<div class="title">ĐẠI LÝ</div>
+
+<a class="btn" href="https://t.me/dailywinbook01">
+    <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">
+    <span>Đại lý TELE</span>
+</a>
+
+<a class="btn" href="https://tinyurl.com/baonhituvan">
+    <img class="icon" src="https://i.postimg.cc/s2pTh0rf/4915a001d866b017652196d1854a3d2e.jpg">
+    <span>Đại lý ZALO</span>
+</a>
+
+<div class="title">CỘNG ĐỒNG</div>
+
+<a class="btn" href="https://www.tiktok.com/@winbook888?_r=1&_t=ZS-91Md0CumhMK">
+    <img class="icon" src="https://i.postimg.cc/C1dNH9cG/LOGO-TIKTOK.png">
+    <span>TikTok</span>
+</a>
+
+<a class="btn" href="https://www.facebook.com/profile.php?id=100076695622884">
+    <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg">
+    <span>Fanpage Chính</span>
+</a>
+  
+</div>
+
+</body>
+</html>
