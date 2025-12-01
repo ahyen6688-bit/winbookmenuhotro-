@@ -2,24 +2,23 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-
-<!-- CHUẨN MOBILE CHO ANDROID + IPHONE -->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
 <title>MENU WINBOOK</title>
 
+<!-- CHUẨN MOBILE + PC -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 <style>
-    body {
+/* NỀN GIỮ NGUYÊN, KHÔNG CẮT, FIXED */
+body {
     margin: 0;
     padding: 0;
-    height: 100vh;
     width: 100vw;
+    min-height: 100vh;
 
     background: url('https://i.postimg.cc/j5sxP9Gb/MENU-BOT-TELE.png') center top no-repeat;
-    background-size: contain;          /* GIỮ NGUYÊN ẢNH 100%, KHÔNG CẮT */
-    background-attachment: fixed;      /* NỀN GIỮ YÊN – MENU SCROLL */
-
-    background-color: #000;            /* KHOẢNG TRỐNG BÊN DƯỚI = MÀU ĐEN */
+    background-size: contain;
+    background-attachment: fixed;
+    background-color: #000;
 
     overflow-x: hidden;
     font-family: Arial, sans-serif;
@@ -28,100 +27,98 @@
     text-size-adjust: none !important;
 }
 
-    /* KHUNG CHÍNH */
-    .wrap {
-        width: 100%;
-        text-align: center;
-        margin-top: 240px;
-        padding-bottom: 50px;
-    }
+/* KHUNG CHÍNH */
+.wrap {
+    width: 100%;
+    text-align: center;
+    margin-top: 240px;
+    padding-bottom: 50px;
+}
 
-    /* SUB-TITLE */
-    .sub-title {
-        color: #ffffff;
-        font-size: 28px;
-        font-weight: 900;
-        margin-top: -35px;
-        margin-bottom: 20px;
-        text-shadow: 0 0 12px #000;
-        letter-spacing: 1px;
-        padding: 0 10px;
-    }
+/* SUB-TITLE */
+.sub-title {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.25;
+    margin-top: -30px;
+    margin-bottom: 22px;
+    text-shadow: 0 0 12px #000;
+    letter-spacing: 1px;
+    padding: 0 10px;
+}
 
-    /* TIÊU ĐỀ */
-    .title {
-        color: #fff;
-        font-size: 20px;
-        font-weight: bold;
-        margin-top: 18px;
-        margin-bottom: 10px;
-        text-shadow: 0 0 6px #000;
-    }
+/* TIÊU ĐỀ */
+.title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 6px #000;
+}
 
-    /* NÚT MOBILE */
-    .btn {
-        width: 420px;
-        max-width: 92%;
-        padding: 14px;
-        margin: 14px auto;
-        border-radius: 40px;
-        background: rgba(255,255,255,0.92);
-        backdrop-filter: blur(6px);
+/* NÚT */
+.btn {
+    width: 420px;
+    max-width: 92%;
+    padding: 14px;
+    margin: 14px auto;
+    border-radius: 40px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+}
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
+/* LED BORDER */
+.btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 40px;
+    padding: 3px;
+    background: linear-gradient(90deg, #ffdf00, #ff8a00, #ffffff, #ffdf00);
+    background-size: 300% 300%;
+    animation: ledRun 2.2s linear infinite;
+    z-index: 2;
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+            mask-composite: exclude;
+}
 
-        font-size: 17px;
-        font-weight: bold;
-        color: #333;
+@keyframes ledRun {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
-        position: relative;
-        overflow: hidden;
-    }
+.icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 5px;
+    object-fit: cover;
+    background: #fff;
+    padding: 2px;
+    z-index: 5;
+}
 
-    /* LED BORDER */
-    .btn::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: 40px;
-        padding: 3px;
-        background: linear-gradient(90deg, #ffdf00, #ff8a00, #ffffff, #ffdf00);
-        background-size: 300% 300%;
-        animation: ledRun 2.2s linear infinite;
-        z-index: 2;
-        -webkit-mask:
-            linear-gradient(#000 0 0) content-box,
-            linear-gradient(#000 0 0);
-        -webkit-mask-composite: xor;
-                mask:
-            linear-gradient(#000 0 0) content-box,
-            linear-gradient(#000 0 0);
-                mask-composite: exclude;
-    }
-
-    @keyframes ledRun {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-
-    .icon {
-        width: 28px;
-        height: 28px;
-        border-radius: 5px;
-        object-fit: cover;
-        background: #fff;
-        padding: 2px;
-        z-index: 5;
-    }
-
-    .btn span {
-        z-index: 5;
-        color: #333;
-    }
+.btn span {
+    z-index: 5;
+    color: #333;
+}
 </style>
 </head>
 
@@ -129,39 +126,4 @@
 
 <div class="wrap">
 
-    <div class="sub-title">🎯 HỆ THỐNG HỖ TRỢ WINBOOK 24/7</div>
-
-    <div class="title">ĐĂNG KÝ & HỖ TRỢ</div>
-
-    <a class="btn"><img class="icon" src="https://i.postimg.cc/RFfnxnTB/LOGO-TICK-VANG.jpg"><span>Đăng ký Nhận ngay 68k</span></a>
-
-    <a class="btn"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"><span>CSKH001</span></a>
-
-    <a class="btn"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"><span>CSKH002</span></a>
-
-    <a class="btn"><img class="icon" src="https://i.postimg.cc/s2pTh0rf/4915a001d866b017652196d1854a3d2e.jpg"><span>CSKH ZALO</span></a>
-
-    <a class="btn"><img class="icon" src="https://cdn-icons-png.flaticon.com/512/5977/5977519.png"><span>Live Chat</span></a>
-
-    <div class="title">THÔNG BÁO SỰ KIỆN - ƯU ĐÃI</div>
-
-    <a class="btn"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"><span>Kênh Chính</span></a>
-
-    <a class="btn"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"><span>Nhóm Chat</span></a>
-
-    <div class="title">ĐẠI LÝ</div>
-
-    <a class="btn"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"><span>Đại lý TELE</span></a>
-
-    <a class="btn"><img class="icon" src="https://i.postimg.cc/s2pTh0rf/4915a001d866b017652196d1854a3d2e.jpg"><span>Đại lý ZALO</span></a>
-
-    <div class="title">CỘNG ĐỒNG</div>
-
-    <a class="btn"><img class="icon" src="https://i.postimg.cc/C1dNH9cG/LOGO-TIKTOK.png"><span>TikTok</span></a>
-
-    <a class="btn"><img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg"><span>Fanpage Chính</span></a>
-
-</div>
-
-</body>
-</html>
+    <div class="sub-title">🎯 HỆ THỐ
