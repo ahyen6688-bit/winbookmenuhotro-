@@ -3,28 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <title>MENU WINBOOK</title>
-
-<!-- CHUẨN MOBILE + PC -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <style>
-/* NỀN GIỮ NGUYÊN, KHÔNG CẮT, FIXED */
+/* ẢNH NỀN GIỮ NGUYÊN 100% */
+.bg-img {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* BODY */
 body {
     margin: 0;
     padding: 0;
-    width: 100vw;
-    min-height: 100vh;
-
-    background: url('https://i.postimg.cc/j5sxP9Gb/MENU-BOT-TELE.png') center top no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-    background-color: #000;
-
-    overflow-x: hidden;
+    background-color: #000; /* che khoảng trống */
     font-family: Arial, sans-serif;
-
     -webkit-text-size-adjust: none !important;
     text-size-adjust: none !important;
+    overflow-x: hidden;
 }
 
 /* KHUNG CHÍNH */
@@ -100,30 +102,4 @@ body {
 }
 
 @keyframes ledRun {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.icon {
-    width: 28px;
-    height: 28px;
-    border-radius: 5px;
-    object-fit: cover;
-    background: #fff;
-    padding: 2px;
-    z-index: 5;
-}
-
-.btn span {
-    z-index: 5;
-    color: #333;
-}
-</style>
-</head>
-
-<body>
-
-<div class="wrap">
-
-    <div class="sub-title">🎯 HỆ THỐ
+    0% { background-pos
