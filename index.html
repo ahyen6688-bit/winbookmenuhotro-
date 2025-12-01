@@ -12,16 +12,20 @@
     body {
     margin: 0;
     padding: 0;
-    background: url('https://i.postimg.cc/j5sxP9Gb/MENU-BOT-TELE.png') no-repeat top center;
-    background-size: contain;         /* SỬA LẠI - GIỮ NGUYÊN ẢNH KHÔNG BỊ CẮT */
-    background-color: #000;           /* LẤP CHỖ THỪA */
-    background-position: top center;
+    background: url('https://i.postimg.cc/j5sxP9Gb/MENU-BOT-TELE.png') top center no-repeat;
+
+    background-size: contain;       /* GIỮ NGUYÊN ẢNH KHÔNG CẮT */
+    background-color: #000;         /* CHO NỀN ĐEN VÀ CHE KHOẢNG TRỐNG */
     background-repeat: no-repeat;
     background-attachment: scroll;
+
+    width: 100vw;
+    min-height: 100vh;              /* GIỮ TỈ LỆ ẢNH CHUẨN, KO BỊ CẮT TRÊN / DƯỚI */
+
     font-family: Arial, sans-serif;
 
-    -webkit-text-size-adjust: 100% !important;
-    text-size-adjust: 100% !important;
+    -webkit-text-size-adjust: none !important;
+    text-size-adjust: none !important;
 }
 
     /* KHUNG CHÍNH */
